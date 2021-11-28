@@ -1,0 +1,46 @@
+$tamanio-nombre:20px;
+$width: 100vw;
+
+.profesores{
+        display: flex;
+        margin: 0px 5px;
+        text-align: center;
+        &__img{
+            width: ($width - 60);
+            height: 40vh;
+            // justify-content: space-around;
+        }
+}
+
+.profesores__img{
+    padding: 3px;
+    border-radius: 50%;
+}
+.NombreProfesores{
+    font-size: ($tamanio-nombre - 2) ;
+    font-weight: bold;
+}
+
+.boton{
+    margin-bottom: 15px;
+    border: 1px solid black;
+}
+
+//BEM//
+// .contendedor__parrafo1--tipografia{
+//     font-family: cursive;
+// }
+
+// .contendedor__titulo1--tamaño{
+//     text-decoration: underline;
+//     text-align: center;
+// }
+
+// .contenedor__parrafo4--centrado{
+//     text-align: center;
+// }
+
+// .profesores__img--bordes{
+//     background-color: black;
+//     border-radius: 50%;
+// }

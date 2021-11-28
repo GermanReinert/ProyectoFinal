@@ -1,0 +1,51 @@
+h3,p {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+table{
+    text-align: center;
+    margin-bottom: 10px;
+    tr{
+        th{
+            background-color: $color-table;
+            color:$color-table-p;
+        }
+    }
+
+}
+
+.tablaYoga{
+    text-align: -webkit-center;
+}
+
+.tablaMeditacion{
+    text-align: -webkit-center;
+}
+//BEM//
+.container1__p1a--centrado{
+    text-align:center;
+    font-weight:bolder;
+}
+// //
+// .container3{
+//     background-color: darkorange;
+//     &__tituloclase3{
+//         color: white;
+//     }
+// }   
+
+//BEM//
+// .container3__p3--bg-color{
+//     text-align: center;
+//     color: white;
+// }
+
+
+@media (max-width:600px){
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        }
+}
