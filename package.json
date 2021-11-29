@@ -1,7 +1,7 @@
 {
   "name": "yogareinertnew",
   "version": "1.0.0",
-  "description": "",
+  "description": "El trabajo se trata de YOGA en donde todavia hay que hacerle modificaciones y terminarlo de emprolijarlo.\r Se entrega asi ya que es lo que se pide en la consigna de GITHUB.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
