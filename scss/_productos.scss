@@ -4,12 +4,16 @@ main{
     }
 }
 
+footer{
+    margin-top: 50px;
+}
+
 .grillaProductos {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 5px;
-    grid-row-gap: 2%;
+    grid-row-gap: 8px;
     justify-items: center;
     margin-top: 50px;
     p{
@@ -18,8 +22,9 @@ main{
         text-align: center;
         text-transform: uppercase;
     }
-    img:hover{
-        transform: scale(1.15);
+    img{
+        height: auto;
+        width: auto;
     }
 }
 
@@ -37,22 +42,17 @@ main{
 @media (max-width:700px){
     .grillaProductos {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
         grid-column-gap: 0px;
-        grid-row-gap: 5px;
         justify-items: center;
     }
 }
 
-@media (max-width:600px){
+@media (max-width:400px){
     .grillaProductos {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
         grid-template-rows: 1fr;
         grid-column-gap: 5px;
-        grid-row-gap: 2%;
         justify-items: center;
-        margin-bottom: 550px;
     }
 }

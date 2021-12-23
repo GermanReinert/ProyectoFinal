@@ -4,26 +4,36 @@
   justify-content: space-between;
   align-items: center; }
   .header__img {
+    margin-left: 40px;
     width: 10%;
     height: 10%; }
-  .header .navegacion__menu {
-    list-style: none; }
-    .header .navegacion__menu li {
-      display: inline-block; }
-      .header .navegacion__menu li a {
-        text-decoration: none;
-        padding: 20px 20px;
-        font-weight: bold;
-        font-size: 20px;
-        color: darkmagenta; }
-        .header .navegacion__menu li a:hover {
-          color: red; }
+  .header .navegacion {
+    width: 70%;
+    margin-top: 20px; }
+    .header .navegacion__menu {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      list-style: none; }
+      .header .navegacion__menu li {
+        display: inline-block; }
+        .header .navegacion__menu li a {
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 22px;
+          color: #ab369d; }
+          .header .navegacion__menu li a:hover {
+            color: #fe9832; }
 
 footer {
   text-align: center;
   margin-bottom: 10px; }
   footer p {
     font-size: 24px; }
+
+.titulo_h1--subrayado {
+  margin-top: 50px; }
 
 .Hero {
   width: 100%; }
@@ -34,15 +44,17 @@ footer {
   .Hero p {
     display: flex; }
 
-.Titulo h1 {
-  text-align: center; }
-
-.Titulo p {
-  text-align: center; }
+.Titulo {
+  margin-left: 30px;
+  margin-right: 30px; }
+  .Titulo h1 {
+    text-align: center; }
+  .Titulo p {
+    text-align: center; }
 
 .grids {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 40px;
   grid-row-gap: 0px;
@@ -54,21 +66,35 @@ footer {
   height: 75vh;
   width: 75vw; }
 
-@media (max-width: 670px) {
+@media (max-width: 1424px) {
+  .grids {
+    grid-template-columns: 1fr 1fr; } }
+
+@media (max-width: 1000px) {
+  .navegacion {
+    width: 100% !important; }
   .header {
     flex-direction: column; }
     .header__img {
-      width: 20%;
-      height: 20%; }
+      width: 45%;
+      height: 45%; }
   .grids {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 40px;
-    grid-row-gap: 0px;
-    margin: 50px 0px 50px 0px;
-    padding: 15px;
-    justify-items: stretch; } }
+    grid-template-rows: repeat(2, 1fr); } }
+
+@media (max-width: 720px) {
+  .header .navegacion__menu {
+    padding: 12px; }
+    .header .navegacion__menu li a {
+      font-size: 14px; }
+  .header {
+    flex-direction: column; }
+    .header__img {
+      margin: 0px; }
+  .ImgBanner {
+    height: 35vh;
+    width: 35vw; }
+  .grids {
+    grid-template-columns: 1fr; } }
 
 body {
   margin: 0;
@@ -106,6 +132,10 @@ table {
   text-align: center;
   font-weight: bolder; }
 
+.clases-tabla td {
+  padding-left: 2%;
+  padding-right: 2%; }
+
 @media (max-width: 600px) {
   .header {
     display: flex;
@@ -117,6 +147,8 @@ form {
   align-items: center; }
   form div {
     margin-bottom: 10px; }
+  form .form1 {
+    width: 45vw; }
 
 .containerContactos__parrafo--centrado {
   text-align: center; }
@@ -133,8 +165,7 @@ form {
   text-align: center; }
 
 .profesores__img {
-  padding: 3px;
-  border-radius: 50%; }
+  padding: 3px; }
 
 .NombreProfesores {
   font-size: 18px;
@@ -144,15 +175,36 @@ form {
   margin-bottom: 15px;
   border: 1px solid black; }
 
+.grid-profesores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 0px; }
+
+@media (max-width: 1000px) {
+  .profesores__img {
+    width: auto;
+    height: auto; }
+  .grid-profesores {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 0px; } }
+
 main p {
   font-size: 16px; }
 
+footer {
+  margin-top: 50px; }
+
 .grillaProductos {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 5px;
-  grid-row-gap: 2%;
+  grid-row-gap: 8px;
   justify-items: center;
   margin-top: 50px; }
   .grillaProductos p {
@@ -160,8 +212,9 @@ main p {
     font-weight: bold;
     text-align: center;
     text-transform: uppercase; }
-  .grillaProductos img:hover {
-    transform: scale(1.15); }
+  .grillaProductos img {
+    height: auto;
+    width: auto; }
 
 .productostexto__parrafo--size {
   font-size: 20px;
@@ -172,44 +225,42 @@ main p {
 @media (max-width: 700px) {
   .grillaProductos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0px;
-    grid-row-gap: 5px;
     justify-items: center; } }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   .grillaProductos {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 5px;
-    grid-row-gap: 2%;
-    justify-items: center;
-    margin-bottom: 550px; } }
+    justify-items: center; } }
 
 h1 {
   text-align: center;
   font-size: 40px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  text-decoration: underline; }
+  font-family: sans-serif;
+  font-weight: bolder; }
 
 p {
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center; }
 
 body {
   background: #EBE3B0; }
 
 h2 {
   font-size: 32px;
-  color: darkorange;
-  text-align: center; }
+  color: #fe9832;
+  text-align: center;
+  font-family: sans-serif; }
 
 h3 {
   font-size: 28px;
-  color: darkorange;
-  text-align: center; }
+  color: #fe9832;
+  text-align: center;
+  font-family: sans-serif; }
 
 .parrafo--p {
   color: red; }
